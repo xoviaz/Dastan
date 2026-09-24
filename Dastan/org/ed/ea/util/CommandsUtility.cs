@@ -25,7 +25,8 @@ namespace Dastan.org.ed.ea.util
             {Settings, typeof(SettingsCommand)},
             {NameGenerator, typeof(NameGeneratorCommand)},
             {JiraIssueSync, typeof(JiraIssueSyncCommand)},
-            {OpenInJira, typeof(OpenInJiraCommand)}
+            {OpenInJira, typeof(OpenInJiraCommand)},
+            {About, typeof(AboutCommand)}
         };
 
         private const string MenuHeader = "-&Dastan";
@@ -46,6 +47,7 @@ namespace Dastan.org.ed.ea.util
         private const string CompareWithExport = "&Compare With ENOVIA Export";
         private const string ImportFromExport = "&Import From ENOVIA Export";
         private const string InstallProfiles = "Install &Profiles";
+        private const string About = "&About";
         // Public so the panel can tell when its Clear button ran and drop its own copy of
         // the log to match.
         public const string ClearModificationLogs = "Clear";
@@ -70,7 +72,8 @@ namespace Dastan.org.ed.ea.util
             container.RegisterSingleton<CompareWithExportCommand>();
             container.RegisterSingleton<ImportFromExportCommand>();
             container.RegisterSingleton<InstallProfilesCommand>();
-            
+            container.RegisterSingleton<AboutCommand>();
+
             return container;
         }
 
@@ -96,7 +99,7 @@ namespace Dastan.org.ed.ea.util
                     return new string[]
                     {
                         ScriptMenu, JiraMenu, "-", ModLogs, ValidateModel, CompareWithExport,
-                        ImportFromExport, "-", InstallProfiles, Settings
+                        ImportFromExport, "-", InstallProfiles, Settings, "-", About
                     };
                 default:
                     return "";

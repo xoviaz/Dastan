@@ -51,6 +51,7 @@
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.5-beta1" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="org\ed\ea\commands\AboutCommand.cs" />
         <Compile Include="org\ed\ea\commands\ClearModificationLogsCommand.cs" />
         <Compile Include="org\ed\ea\commands\CompareWithExportCommand.cs" />
         <Compile Include="org\ed\ea\commands\GenerateModifiedScriptCommand.cs" />
@@ -170,6 +171,7 @@
         <Compile Include="org\ed\ea\services\wrapper\WrapperScriptGenerator.cs" />
         <Compile Include="org\ed\ea\settings\AppSettings.cs" />
         <Compile Include="org\ed\ea\settings\SettingsTransfer.cs" />
+        <Compile Include="org\ed\ea\tool\AboutForm.cs" />
         <Compile Include="org\ed\ea\tool\ModelValidationForm.cs" />
         <Compile Include="org\ed\ea\tool\ModificationLogs.cs" />
         <Compile Include="org\ed\ea\tool\MqlRtfBuilder.cs" />
@@ -195,6 +197,7 @@
       <EmbeddedResource Include="icons\clear.png" />
       <EmbeddedResource Include="icons\export.png" />
       <EmbeddedResource Include="icons\dastan.ico" />
+      <EmbeddedResource Include="icons\dastan-48.png" />
     </ItemGroup>
     <ItemGroup>
       <EmbeddedResource Include="org\ed\ea\tool\Settings.resx" />
