@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<MDG.Technology version="1.0">
+    <Documentation id="SchemaTech" name="Schema Technology" version="1.0" notes="Schema Profile + Toolbox"/>
+
+    <UMLProfiles>
+        <UMLProfile>
+            <Documentation id="B262F382-10" name="PLM_Schema_Profile" version="1.0" notes="PLM Schema Profile"/>
+            <Content>
+                <Stereotypes>
+                    <Stereotype name="Attribute" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Attribute"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                            <Tag name="Multi Line" type="Boolean" values=",True,False" description="" default=""/>
+                            <Tag name="Multi Value" type="Boolean" values=",True,False" description="" default=""/>
+                            <Tag name="Range Value" type="Boolean" values=",True,False" description="" default=""/>
+                            <Tag name="Max Length" type="Integer" description="" default=""/>
+                            <Tag name="Reset On Clone" type="Boolean" values=",True,False" description="" default=""/>
+                            <Tag name="Reset On Revision" type="Boolean" values=",True,False" description="" default=""/>
+                            <Tag name="Allowed Values" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Type" notes="" cx="" cy="" metafile="" bgcolor="15128749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                            <Tag name="Revisionable" type="Boolean" values="True,False" default="False" description=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Role" notes="" cx="" cy="" metafile="" bgcolor="15112749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Policy" notes="" cx="" cy="" metafile="" bgcolor="15120749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="StateMachine"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                            <Tag name="Type" type="String" description="" default=""/>
+                            <Tag name="Store" type="String" description="" default="STORE"/>
+                            <Tag name="Format" type="String" description="" default="generic"/>
+                            <Tag name="Default Format" type="String" description="" default="generic"/>
+                            <Tag name="Sequence" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Start State" notes="" cx="" cy="" metafile="" bgcolor="15130749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="State"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                            <Tag name="Minor Revisionable" type="String" description="" default="true"/>
+                            <Tag name="Major Revisionable" type="String" description="" default="true"/>
+                            <Tag name="Versionable" type="String" description="" default="true"/>
+                            <Tag name="Promote" type="String" description="" default="true"/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Final State" notes="" cx="" cy="" metafile="" bgcolor="15330749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="State"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                            <Tag name="Minor Revisionable" type="String" description="" default="true"/>
+                            <Tag name="Major Revisionable" type="String" description="" default="true"/>
+                            <Tag name="Versionable" type="String" description="" default="true"/>
+                            <Tag name="Promote" type="String" description="" default="true"/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="State" notes="" cx="" cy="" metafile="" bgcolor="15190749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Final State"/>
+                            <Apply type="State"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                            <Tag name="Minor Revisionable" type="String" description="" default="true"/>
+                            <Tag name="Major Revisionable" type="String" description="" default="true"/>
+                            <Tag name="Versionable" type="String" description="" default="true"/>
+                            <Tag name="Promote" type="String" description="" default="true"/>
+                            <Tag name="Public Access" type="String" description="" default="none"/>
+                            <Tag name="Owner Access" type="String" description="" default="none"/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Promote" notes="" cx="" cy="" metafile="" bgcolor="15140749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Transition"/>
+                        </AppliesTo>
+                        <TaggedValues/>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Demote" notes="" cx="" cy="" metafile="" bgcolor="15150749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Transition"/>
+                        </AppliesTo>
+                        <TaggedValues/>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Approve" notes="" cx="" cy="" metafile="" bgcolor="15150749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Transition"/>
+                        </AppliesTo>
+                        <TaggedValues/>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Reject" notes="" cx="" cy="" metafile="" bgcolor="15150749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Transition"/>
+                        </AppliesTo>
+                        <TaggedValues/>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Trigger" notes="" cx="" cy="" metafile="" bgcolor="15150749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Usage"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Type" type="String" values="Action,Override,Check" description="" default="Action"/>
+                            <Tag name="Event" type="String" values="modify,changename,changeowner,changepolicy,changetype,changevault,checkin,checkout,connect,copy,create,delete,disconnect,grant,revoke,lock,modiyfattribute,modifydescription,revision,unlock" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="User" notes="" cx="" cy="" metafile="" bgcolor="15160749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Actor"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Accesses" type="String" description="" default=""/>
+                            <Tag name="Filter" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Relationship" notes="" cx="" cy="" metafile="" bgcolor="10092543" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                            <Tag name="From Revision" type="String" values="replicate,float,none" description="" default="none"/>
+                            <Tag name="From Clone" type="String" values="replicate,float,none" description="" default="none"/>
+                            <Tag name="From Propagate modify" type="Boolean" values="True,False" description="" default="False"/>
+                            <Tag name="From Propagate connection" type="Boolean" values="True,False" description="" default="False"/>
+                            <Tag name="To Revision" type="String" values="replicate,float,none" description="" default="none"/>
+                            <Tag name="To Clone" type="String" values="replicate,float,none" description="" default="none"/>
+                            <Tag name="To Propagate modify" type="Boolean" values="True,False" description="" default="False"/>
+                            <Tag name="To Propagate connection" type="Boolean" values="True,False" description="" default="False"/>
+                            <Tag name="Prevent Duplicate" type="Boolean" values="True,False" description="" default="True"/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="eService Trigger Program Parameters" notes="" cx="" cy="" metafile="" bgcolor="12037843" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="eService Program Argument 1" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 2" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 3" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 4" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 5" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 6" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 7" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 8" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 9" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 10" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 11" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 12" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 13" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 14" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 15" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Object Number Generator" notes="" cx="" cy="" metafile="" bgcolor="12040843" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="eService Name Prefix" type="String" description="" default=""/>
+                            <Tag name="eService Name Suffix" type="String" description="" default=""/>
+                            <Tag name="eService Processing Time Limit" type="String" description="" default="60"/>
+                            <Tag name="eService Retry Count" type="String" description="" default="5"/>
+                            <Tag name="eService Retry Delay" type="String" description="" default="1000"/>
+                            <Tag name="eService Safety Policy" type="String" description="" default=""/>
+                            <Tag name="eService Safety Vault" type="String" description="" default="vault_eServiceAdministration"/>
+                            <Tag name="eService Next Number" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                </Stereotypes>
+            </Content>
+        </UMLProfile>
+    </UMLProfiles>
+
+    <UIToolboxes>
+        <UMLProfile profiletype="uml2">
+            <Documentation id="Schema-Profile-Toolbox-001" name="Schema Profile" version="1.0" notes="Toolbox for Schemas"/>
+            <Content>
+                <Stereotypes>
+                    <Stereotype name="SchemaElements" alias="Schema Elements" notes="Elements from schema profile">
+                        <AppliesTo>
+                            <Apply type="ToolboxPage"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="PLM_Schema_Profile::Attribute(UML::Class)" type="" description="" unit="" values="" default="Attribute"/>
+                            <Tag name="PLM_Schema_Profile::Type(UML::Class)" type="" description="" unit="" values="" default="Type"/>
+                            <Tag name="PLM_Schema_Profile::Role(UML::Class)" type="" description="" unit="" values="" default="Role"/>
+                            <Tag name="PLM_Schema_Profile::Policy(UML::Class)" type="" description="" unit="" values="" default="Policy"/>
+                            <Tag name="PLM_Schema_Profile::Start(UML::Class)" type="" description="" unit="" values="" default="Start"/>
+                            <Tag name="PLM_Schema_Profile::Final(UML::Class)" type="" description="" unit="" values="" default="Final"/>
+                            <Tag name="PLM_Schema_Profile::State(UML::Class)" type="" description="" unit="" values="" default="State"/>
+                            <Tag name="PLM_Schema_Profile::Promote(UML::Class)" type="" description="" unit="" values="" default="Promote"/>
+                            <Tag name="PLM_Schema_Profile::Demote(UML::Class)" type="" description="" unit="" values="" default="Demote"/>
+                            <Tag name="PLM_Schema_Profile::Approve(UML::Class)" type="" description="" unit="" values="" default="Approve"/>
+                            <Tag name="PLM_Schema_Profile::Reject(UML::Class)" type="" description="" unit="" values="" default="Reject"/>
+                            <Tag name="PLM_Schema_Profile::Trigger(UML::Class)" type="" description="" unit="" values="" default="Trigger"/>
+                            <Tag name="PLM_Schema_Profile::User(UML::Class)" type="" description="" unit="" values="" default="User"/>
+                            <Tag name="PLM_Schema_Profile::Relationship(UML::Class)" type="" description="" unit="" values="" default="Relationship"/>
+                            <Tag name="PLM_Schema_Profile::eService Trigger Program Parameters(UML::Class)" type="" description="" unit="" values="" default="eService Trigger Program Parameters"/>
+                            <Tag name="PLM_Schema_Profile::Object Number Generator(UML::Class)" type="" description="" unit="" values="" default="Object Number Generator"/>
+                        </TaggedValues>
+                    </Stereotype>
+                    <Stereotype name="SchemaRelationships" alias="Schema Relationships" notes="Relationships from schema profile">
+                        <AppliesTo>
+                            <Apply type="ToolboxPage"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="PLM_Schema_Profile::Relationship(UML::AssociationClass)" type="" description="" unit="" values="" default="Association Class"/>
+                        </TaggedValues>
+                    </Stereotype>
+                </Stereotypes>
+                <TaggedValueTypes/>
+                <ViewDefinitions/>
+                <Metamodel/>
+            </Content>
+        </UMLProfile>
+    </UIToolboxes>
+
+</MDG.Technology>

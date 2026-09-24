@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<MDG.Technology version="1.0">
+    <Documentation id="ClassTech" name="Class Diagram Technology" version="1.0" notes="PLM Class Diagram Profile"/>
+
+    <UMLProfiles>
+        <UMLProfile>
+            <Documentation id="B262F382-12" name="PLM_class_diagram_profile" version="1.0" notes="PLM Class Diagram Profile"/>
+            <Content>
+                <Stereotypes>
+                    <Stereotype name="controller" notes="REST Controller" cx="" cy="" metafile="" bgcolor="15003365" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Base Path" type="String" description="Base API path" default="/"/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="endpoint" notes="REST Endpoint" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Operation"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="HTTP Method" type="String" values="GET,POST,PUT" description="HTTP request method" default="GET"/>
+                            <Tag name="Path" type="String" description="Endpoint path" default="/"/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                </Stereotypes>
+                <TaggedValueTypes/>
+            </Content>
+        </UMLProfile>
+    </UMLProfiles>
+
+</MDG.Technology>

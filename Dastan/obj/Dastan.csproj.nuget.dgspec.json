@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\m.parsapour\\Desktop\\EA Test\\Dastan\\Dastan\\Dastan.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\m.parsapour\\Desktop\\EA Test\\Dastan\\Dastan\\Dastan.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\m.parsapour\\Desktop\\EA Test\\Dastan\\Dastan\\Dastan.csproj",
+        "projectName": "Dastan",
+        "projectPath": "C:\\Users\\m.parsapour\\Desktop\\EA Test\\Dastan\\Dastan\\Dastan.csproj",
+        "packagesPath": "C:\\Users\\m.parsapour\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\m.parsapour\\Desktop\\EA Test\\Dastan\\Dastan\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "C:\\Users\\m.parsapour\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "framework": "net48",
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "framework": "net48",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.5-beta1, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[11.0.0-preview.7.26381.103, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

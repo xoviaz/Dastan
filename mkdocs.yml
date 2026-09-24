@@ -1,0 +1,66 @@
+site_name: Dastan User Manual
+site_description: Generating ENOVIA MQL from Enterprise Architect models
+docs_dir: docs
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.png
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - Installation: installation.md
+      - Settings: settings.md
+  - Modelling:
+      - Profiles and tagged values: modelling.md
+      - Checking the model: validate.md
+      - Comparing with ENOVIA: compare.md
+      - Importing from ENOVIA: importing.md
+  - Generating scripts:
+      - The generators: generating.md
+      - Preview and script check: preview.md
+  - Tracking changes:
+      - Modification log: modification-log.md
+      - Delta scripts: delta-scripts.md
+  - Jira: jira.md
+  - Reference:
+      - How MQL handles quotes: mql-notes.md
+      - Troubleshooting: troubleshooting.md

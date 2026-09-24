@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<MDG.Technology version="1.0">
+    <Documentation id="DastanTech" name="Dastan Technology" version="1.0" notes="Stereotypes and toolboxes Dastan reads to generate ENOVIA/3DEXPERIENCE MQL: the administrative schema (types, attributes, relationships, policies, roles), the ENOVIA Web widget UI, and REST service annotations for class diagrams."/>
+
+    <UMLProfiles>
+        <UMLProfile>
+            <Documentation id="B262F382-10" name="PLM Schema Profile" version="1.0" notes="Type, Attribute, Relationship, Policy, Role, State and Trigger stereotypes for the ENOVIA/3DEXPERIENCE administrative schema. Read by Dastan's Schema, Policy and Trigger Script Generators to produce MQL."/>
+            <Content>
+                <Stereotypes>
+                    <Stereotype name="Attribute" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Attribute"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                            <Tag name="Multi Line" type="Boolean" values=",True,False" description="" default=""/>
+                            <Tag name="Multi Value" type="Boolean" values=",True,False" description="" default=""/>
+                            <Tag name="Range Value" type="Boolean" values=",True,False" description="" default=""/>
+                            <Tag name="Max Length" type="Integer" description="" default=""/>
+                            <Tag name="Reset On Clone" type="Boolean" values=",True,False" description="" default=""/>
+                            <Tag name="Reset On Revision" type="Boolean" values=",True,False" description="" default=""/>
+                            <Tag name="Allowed Values" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Type" notes="" cx="" cy="" metafile="" bgcolor="15128749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                            <Tag name="Revisionable" type="Boolean" values="True,False" default="False" description=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Role" notes="" cx="" cy="" metafile="" bgcolor="15112749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Policy" notes="" cx="" cy="" metafile="" bgcolor="15120749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="StateMachine"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                            <Tag name="Type" type="String" description="" default=""/>
+                            <Tag name="Store" type="String" description="" default="STORE"/>
+                            <Tag name="Format" type="String" description="" default="generic"/>
+                            <Tag name="Default Format" type="String" description="" default="generic"/>
+                            <Tag name="Sequence" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Start State" notes="" cx="" cy="" metafile="" bgcolor="15130749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="State"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                            <Tag name="Minor Revisionable" type="String" description="" default="true"/>
+                            <Tag name="Major Revisionable" type="String" description="" default="true"/>
+                            <Tag name="Versionable" type="String" description="" default="true"/>
+                            <Tag name="Promote" type="String" description="" default="true"/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Final State" notes="" cx="" cy="" metafile="" bgcolor="15330749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="State"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                            <Tag name="Minor Revisionable" type="String" description="" default="true"/>
+                            <Tag name="Major Revisionable" type="String" description="" default="true"/>
+                            <Tag name="Versionable" type="String" description="" default="true"/>
+                            <Tag name="Promote" type="String" description="" default="true"/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="State" notes="" cx="" cy="" metafile="" bgcolor="15190749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Final State"/>
+                            <Apply type="State"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                            <Tag name="Minor Revisionable" type="String" description="" default="true"/>
+                            <Tag name="Major Revisionable" type="String" description="" default="true"/>
+                            <Tag name="Versionable" type="String" description="" default="true"/>
+                            <Tag name="Promote" type="String" description="" default="true"/>
+                            <Tag name="Public Access" type="String" description="" default="none"/>
+                            <Tag name="Owner Access" type="String" description="" default="none"/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Promote" notes="" cx="" cy="" metafile="" bgcolor="15140749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Transition"/>
+                        </AppliesTo>
+                        <TaggedValues/>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Demote" notes="" cx="" cy="" metafile="" bgcolor="15150749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Transition"/>
+                        </AppliesTo>
+                        <TaggedValues/>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Approve" notes="" cx="" cy="" metafile="" bgcolor="15150749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Transition"/>
+                        </AppliesTo>
+                        <TaggedValues/>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Reject" notes="" cx="" cy="" metafile="" bgcolor="15150749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Transition"/>
+                        </AppliesTo>
+                        <TaggedValues/>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Trigger" notes="" cx="" cy="" metafile="" bgcolor="15150749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Usage"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Type" type="String" values="Action,Override,Check" description="" default="Action"/>
+                            <Tag name="Event" type="String" values="modify,changename,changeowner,changepolicy,changetype,changevault,checkin,checkout,connect,copy,create,delete,disconnect,grant,revoke,lock,modiyfattribute,modifydescription,revision,unlock" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="User" notes="" cx="" cy="" metafile="" bgcolor="15160749" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Actor"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Accesses" type="String" description="" default=""/>
+                            <Tag name="Filter" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Relationship" notes="" cx="" cy="" metafile="" bgcolor="10092543" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Display Name" type="String" description="" default=""/>
+                            <Tag name="From Revision" type="String" values="replicate,float,none" description="" default="none"/>
+                            <Tag name="From Clone" type="String" values="replicate,float,none" description="" default="none"/>
+                            <Tag name="From Propagate modify" type="Boolean" values="True,False" description="" default="False"/>
+                            <Tag name="From Propagate connection" type="Boolean" values="True,False" description="" default="False"/>
+                            <Tag name="To Revision" type="String" values="replicate,float,none" description="" default="none"/>
+                            <Tag name="To Clone" type="String" values="replicate,float,none" description="" default="none"/>
+                            <Tag name="To Propagate modify" type="Boolean" values="True,False" description="" default="False"/>
+                            <Tag name="To Propagate connection" type="Boolean" values="True,False" description="" default="False"/>
+                            <Tag name="Prevent Duplicate" type="Boolean" values="True,False" description="" default="True"/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="eService Trigger Program Parameters" notes="" cx="" cy="" metafile="" bgcolor="12037843" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="eService Program Argument 1" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 2" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 3" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 4" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 5" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 6" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 7" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 8" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 9" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 10" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 11" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 12" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 13" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 14" type="String" description="" default=""/>
+                            <Tag name="eService Program Argument 15" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="Object Number Generator" notes="" cx="" cy="" metafile="" bgcolor="12040843" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="eService Name Prefix" type="String" description="" default=""/>
+                            <Tag name="eService Name Suffix" type="String" description="" default=""/>
+                            <Tag name="eService Processing Time Limit" type="String" description="" default="60"/>
+                            <Tag name="eService Retry Count" type="String" description="" default="5"/>
+                            <Tag name="eService Retry Delay" type="String" description="" default="1000"/>
+                            <Tag name="eService Safety Policy" type="String" description="" default=""/>
+                            <Tag name="eService Safety Vault" type="String" description="" default="vault_eServiceAdministration"/>
+                            <Tag name="eService Next Number" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                </Stereotypes>
+            </Content>
+        </UMLProfile>
+        <UMLProfile>
+            <Documentation id="B262F382-11" name="Widget Profile" version="1.0" notes="Stereotypes for ENOVIA Web / Widget Center UI configuration: widgets, settings, commands, menus, portals, tables, forms, fields and the connectors between them. Read by Dastan's UI Script Generator."/>
+            <Content>
+                <Stereotypes>
+                    <Stereotype name="CW_Widget" notes="" cx="" cy="" metafile="" bgcolor="15658671" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Label" notes="" cx="" cy="" metafile="" bgcolor="2139610" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_EN" type="String" description="" default=""/>
+                            <Tag name="CW_FA" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Tooltip" notes="" cx="" cy="" metafile="" bgcolor="2139700" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_EN" type="String" description="" default=""/>
+                            <Tag name="CW_FA" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Setting" notes="" cx="" cy="" metafile="" bgcolor="15794160" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Key" type="String" description="" default=""/>
+                            <Tag name="CW_Value" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_WidgetRelatedMenu" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Aggregation"/>
+                        </AppliesTo>
+                        <TaggedValues/>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_MenuRelatedMenuItem" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Aggregation"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Order" type="Integer" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_UIAssetRelatedSetting" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Aggregation"/>
+                        </AppliesTo>
+                        <TaggedValues/>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_UIComponentRelatedTextHelper" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Aggregation"/>
+                        </AppliesTo>
+                        <TaggedValues/>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_CommandRelatedParameter" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Aggregation"/>
+                        </AppliesTo>
+                        <TaggedValues/>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_DefaultCommand" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Aggregation"/>
+                        </AppliesTo>
+                        <TaggedValues/>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_DataItemRelatedInput" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Aggregation"/>
+                        </AppliesTo>
+                        <TaggedValues/>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_RelatedColumns" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Aggregation"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_FreezePane" type="Boolean" values="True,False" description="" default=""/>
+                            <Tag name="CW_Order" type="Integer" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_PortalRelatedCommands" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Aggregation"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Order" type="Integer" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_RelatedSteps" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Aggregation"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Order" type="Integer" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_RelatedSections" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Aggregation"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Order" type="Integer" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_RelatedFields" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Aggregation"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Order" type="Integer" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Parameter" notes="" cx="" cy="" metafile="" bgcolor="14150650" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Key" type="String" description="" default=""/>
+                            <Tag name="CW_Value" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Command" notes="" cx="" cy="" metafile="" bgcolor="9221330" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Menu" notes="" cx="" cy="" metafile="" bgcolor="11186720" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Channel" notes="" cx="" cy="" metafile="" bgcolor="10061943" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Portal" notes="" cx="" cy="" metafile="" bgcolor="7059389" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                            <Tag name="CW_AssociatedType" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Table" notes="" cx="" cy="" metafile="" bgcolor="7059400" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Column" notes="" cx="" cy="" metafile="" bgcolor="7059500" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                            <Tag name="CW_ExpressionType" type="String" values="basic,attribute,program" description="" default=""/>
+                            <Tag name="CW_ExpressionValue" type="String" description="" default=""/>
+                            <Tag name="CW_Range" type="String" description="" default=""/>
+                            <Tag name="CW_Hidden" type="Boolean" values="True,False" description="" default=""/>
+                            <Tag name="CW_Alt" type="String" description="" default=""/>
+                            <Tag name="CW_RelationshipName" type="String" description="" default=""/>
+                            <Tag name="CW_RelationshipDirection" type="String" values="FROM,TO" description="" default=""/>
+                            <Tag name="CW_Action" type="String" values="NONE,CONNECT,DISCONNECT,MODIFY,DELETE" description="" default=""/>
+                            <Tag name="CW_DataType" type="String" values="BUSINESS_OBJECT,RELATIONSHIP" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_DatePicker" notes="" cx="" cy="" metafile="" bgcolor="7059600" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                            <Tag name="CW_Calendar" type="String" description="" default=""/>
+                            <Tag name="CW_Format" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_TextControl" notes="" cx="" cy="" metafile="" bgcolor="7059700" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_TextBox" notes="" cx="" cy="" metafile="" bgcolor="7059800" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_TextArea" notes="" cx="" cy="" metafile="" bgcolor="7059900" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_ChoiceControl" notes="" cx="" cy="" metafile="" bgcolor="70510000" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                            <Tag name="CW_RangeType" type="String" values="EXPRESSION,CUSTOM" description="" default="EXPRESSION"/>
+                            <Tag name="CW_RangeValues" type="String" description="" default=""/>
+                            <Tag name="CW_RangeDisplays" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_TypeChooser" notes="" cx="" cy="" metafile="" bgcolor="70510100" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                            <Tag name="CW_TypeQuery" type="String" description="" default=""/>
+                            <Tag name="CW_InclusionList" type="String" description="" default=""/>
+                            <Tag name="CW_ExclustionList" type="String" description="" default=""/>
+                            <Tag name="CW_RangeType" type="String" values="EXPRESSION,CUSTOM" description="" default="EXPRESSION"/>
+                            <Tag name="CW_RangeValues" type="String" description="" default=""/>
+                            <Tag name="CW_RangeDisplays" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_SelectionControl" notes="" cx="" cy="" metafile="" bgcolor="70510200" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                            <Tag name="CW_Selection" type="String" values="SINGLE,MULTIPLE" description="" default="SINGLE"/>
+                            <Tag name="CW_RangeType" type="String" values="EXPRESSION,CUSTOM" description="" default="EXPRESSION"/>
+                            <Tag name="CW_RangeValues" type="String" description="" default=""/>
+                            <Tag name="CW_RangeDisplays" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Search" notes="" cx="" cy="" metafile="" bgcolor="70510300" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                            <Tag name="CW_Query" type="String" description="" default=""/>
+                            <Tag name="CW_Selection" type="String" values="SINGLE,MULTIPLE" description="" default="SINGLE"/>
+                            <Tag name="CW_RangeType" type="String" values="EXPRESSION,CUSTOM" description="" default="EXPRESSION"/>
+                            <Tag name="CW_RangeValues" type="String" description="" default=""/>
+                            <Tag name="CW_RangeDisplays" type="String" description="" default=""/>
+                            <Tag name="CW_IncludeProgram" type="String" description="" default=""/>
+                            <Tag name="CW_ExcludeProgram" type="String" description="" default=""/>
+                            <Tag name="CW_IsDynamicQuery" type="Boolean" values="True,False" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_ComboBox" notes="" cx="" cy="" metafile="" bgcolor="70510400" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                            <Tag name="CW_Selection" type="String" values="SINGLE,MULTIPLE" description="" default="SINGLE"/>
+                            <Tag name="CW_RangeType" type="String" values="EXPRESSION,CUSTOM,PROGRAM" description="" default="EXPRESSION"/>
+                            <Tag name="CW_RangeValues" type="String" description="" default=""/>
+                            <Tag name="CW_RangeDisplays" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_CheckBox" notes="" cx="" cy="" metafile="" bgcolor="70510500" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                            <Tag name="CW_Selection" type="String" values="SINGLE,MULTIPLE" description="" default="SINGLE"/>
+                            <Tag name="CW_RangeType" type="String" values="EXPRESSION,CUSTOM" description="" default="EXPRESSION"/>
+                            <Tag name="CW_RangeValues" type="String" description="" default=""/>
+                            <Tag name="CW_RangeDisplays" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_TextComboBox" notes="" cx="" cy="" metafile="" bgcolor="70510600" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                            <Tag name="CW_Selection" type="String" values="SINGLE,MULTIPLE" description="" default="SINGLE"/>
+                            <Tag name="CW_RangeType" type="String" values="EXPRESSION,CUSTOM" description="" default="EXPRESSION"/>
+                            <Tag name="CW_RangeValues" type="String" description="" default=""/>
+                            <Tag name="CW_RangeDisplays" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Form" notes="" cx="" cy="" metafile="" bgcolor="70510610" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Step" notes="" cx="" cy="" metafile="" bgcolor="70550610" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Field" notes="" cx="" cy="" metafile="" bgcolor="7004600" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                            <Tag name="CW_ExpressionType" type="String" values="basic,attribute,program" description="" default=""/>
+                            <Tag name="CW_ExpressionValue" type="String" description="" default=""/>
+                            <Tag name="CW_Range" type="String" description="" default=""/>
+                            <Tag name="CW_Hidden" type="Boolean" values="True,False" description="" default=""/>
+                            <Tag name="CW_Alt" type="String" description="" default=""/>
+                            <Tag name="CW_RelationshipName" type="String" description="" default=""/>
+                            <Tag name="CW_RelationshipDirection" type="String" values="FROM,TO" description="" default=""/>
+                            <Tag name="CW_Action" type="String" values="NONE,CONNECT,DISCONNECT,MODIFY,DELETE" description="" default=""/>
+                            <Tag name="CW_DataType" type="String" values="BUSINESS_OBJECT,RELATIONSHIP" description="" default=""/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="CW_Section" notes="" cx="" cy="" metafile="" bgcolor="7052600" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="CW_Href" type="String" description="" default=""/>
+                            <Tag name="Title" type="String" description="" default=""/>
+                            <Tag name="CW_Collapsable" type="Boolean" values="True,False" description="" default="False"/>
+                            <Tag name="CW_Expanded" type="Boolean" values="True,False" description="" default="True"/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                </Stereotypes>
+                <TaggedValueTypes/>
+            </Content>
+        </UMLProfile>
+        <UMLProfile>
+            <Documentation id="B262F382-12" name="Controller Profile" version="1.0" notes="REST controller and endpoint stereotypes for documenting service APIs on an ordinary class diagram. Not read by any Dastan generator."/>
+            <Content>
+                <Stereotypes>
+                    <Stereotype name="controller" notes="REST Controller" cx="" cy="" metafile="" bgcolor="15003365" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Class"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Base Path" type="String" description="Base API path" default="/"/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                    <Stereotype name="endpoint" notes="REST Endpoint" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+                        <AppliesTo>
+                            <Apply type="Operation"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="HTTP Method" type="String" values="GET,POST,PUT" description="HTTP request method" default="GET"/>
+                            <Tag name="Path" type="String" description="Endpoint path" default="/"/>
+                        </TaggedValues>
+                        <Constraints/>
+                    </Stereotype>
+                </Stereotypes>
+                <TaggedValueTypes/>
+            </Content>
+        </UMLProfile>
+    </UMLProfiles>
+
+    <UIToolboxes>
+        <UMLProfile profiletype="uml2">
+            <Documentation id="Schema-Profile-Toolbox-001" name="Schema Profile" version="1.0" notes="Toolbox page for drawing schema elements: Type, Attribute, Role, Policy, states, triggers and relationships."/>
+            <Content>
+                <Stereotypes>
+                    <Stereotype name="SchemaElements" alias="Schema Elements" notes="Elements from schema profile">
+                        <AppliesTo>
+                            <Apply type="ToolboxPage"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="PLM_Schema_Profile::Attribute(UML::Class)" type="" description="" unit="" values="" default="Attribute"/>
+                            <Tag name="PLM_Schema_Profile::Type(UML::Class)" type="" description="" unit="" values="" default="Type"/>
+                            <Tag name="PLM_Schema_Profile::Role(UML::Class)" type="" description="" unit="" values="" default="Role"/>
+                            <Tag name="PLM_Schema_Profile::Policy(UML::Class)" type="" description="" unit="" values="" default="Policy"/>
+                            <Tag name="PLM_Schema_Profile::Start(UML::Class)" type="" description="" unit="" values="" default="Start"/>
+                            <Tag name="PLM_Schema_Profile::Final(UML::Class)" type="" description="" unit="" values="" default="Final"/>
+                            <Tag name="PLM_Schema_Profile::State(UML::Class)" type="" description="" unit="" values="" default="State"/>
+                            <Tag name="PLM_Schema_Profile::Promote(UML::Class)" type="" description="" unit="" values="" default="Promote"/>
+                            <Tag name="PLM_Schema_Profile::Demote(UML::Class)" type="" description="" unit="" values="" default="Demote"/>
+                            <Tag name="PLM_Schema_Profile::Approve(UML::Class)" type="" description="" unit="" values="" default="Approve"/>
+                            <Tag name="PLM_Schema_Profile::Reject(UML::Class)" type="" description="" unit="" values="" default="Reject"/>
+                            <Tag name="PLM_Schema_Profile::Trigger(UML::Class)" type="" description="" unit="" values="" default="Trigger"/>
+                            <Tag name="PLM_Schema_Profile::User(UML::Class)" type="" description="" unit="" values="" default="User"/>
+                            <Tag name="PLM_Schema_Profile::Relationship(UML::Class)" type="" description="" unit="" values="" default="Relationship"/>
+                            <Tag name="PLM_Schema_Profile::eService Trigger Program Parameters(UML::Class)" type="" description="" unit="" values="" default="eService Trigger Program Parameters"/>
+                            <Tag name="PLM_Schema_Profile::Object Number Generator(UML::Class)" type="" description="" unit="" values="" default="Object Number Generator"/>
+                        </TaggedValues>
+                    </Stereotype>
+                    <Stereotype name="SchemaRelationships" alias="Schema Relationships" notes="Relationships from schema profile">
+                        <AppliesTo>
+                            <Apply type="ToolboxPage"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="PLM_Schema_Profile::Relationship(UML::AssociationClass)" type="" description="" unit="" values="" default="Association Class"/>
+                        </TaggedValues>
+                    </Stereotype>
+                </Stereotypes>
+                <TaggedValueTypes/>
+                <ViewDefinitions/>
+                <Metamodel/>
+            </Content>
+        </UMLProfile>
+        <UMLProfile profiletype="uml2">
+            <Documentation id="Widget-Profile-Toolbox-001" name="Widget Profile" version="1.0" notes="Toolbox pages for drawing widget UI elements and the connectors between them."/>
+            <Content>
+                <Stereotypes>
+                    <Stereotype name="WidgetElements" alias="Widget Elements" notes="Elements from widget profile">
+                        <AppliesTo>
+                            <Apply type="ToolboxPage"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Widget_Profile::CW_Widget(UML::Class)" type="" description="" unit="" values="" default="Widget"/>
+                            <Tag name="Widget_Profile::CW_Setting(UML::Class)" type="" description="" unit="" values="" default="Setting"/>
+                            <Tag name="Widget_Profile::CW_Parameter(UML::Class)" type="" description="" unit="" values="" default="Parameter"/>
+                            <Tag name="Widget_Profile::CW_Command(UML::Class)" type="" description="" unit="" values="" default="Command"/>
+                            <Tag name="Widget_Profile::CW_Menu(UML::Class)" type="" description="" unit="" values="" default="Menu"/>
+                            <Tag name="Widget_Profile::CW_Channel(UML::Class)" type="" description="" unit="" values="" default="Channel"/>
+                            <Tag name="Widget_Profile::CW_Portal(UML::Class)" type="" description="" unit="" values="" default="Portal"/>
+                            <Tag name="Widget_Profile::CW_Table(UML::Class)" type="" description="" unit="" values="" default="Table"/>
+                            <Tag name="Widget_Profile::CW_Column(UML::Class)" type="" description="" unit="" values="" default="Column"/>
+                            <Tag name="Widget_Profile::CW_DatePicker(UML::Class)" type="" description="" unit="" values="" default="Date Picker"/>
+                            <Tag name="Widget_Profile::CW_TextControl(UML::Class)" type="" description="" unit="" values="" default="Text Control"/>
+                            <Tag name="Widget_Profile::CW_TextBox(UML::Class)" type="" description="" unit="" values="" default="Text Box"/>
+                            <Tag name="Widget_Profile::CW_TextArea(UML::Class)" type="" description="" unit="" values="" default="Text Area"/>
+                            <Tag name="Widget_Profile::CW_ChoiceControl(UML::Class)" type="" description="" unit="" values="" default="Choice Control"/>
+                            <Tag name="Widget_Profile::CW_TypeChooser(UML::Class)" type="" description="" unit="" values="" default="Type Chooser"/>
+                            <Tag name="Widget_Profile::CW_SelectionControl(UML::Class)" type="" description="" unit="" values="" default="Selection Control"/>
+                            <Tag name="Widget_Profile::CW_Search(UML::Class)" type="" description="" unit="" values="" default="Search"/>
+                            <Tag name="Widget_Profile::CW_ComboBox(UML::Class)" type="" description="" unit="" values="" default="Combo box"/>
+                            <Tag name="Widget_Profile::CW_CheckBox(UML::Class)" type="" description="" unit="" values="" default="Check box"/>
+                            <Tag name="Widget_Profile::CW_TextComboBox(UML::Class)" type="" description="" unit="" values="" default="Text Combo Box"/>
+                            <Tag name="Widget_Profile::CW_Form(UML::Class)" type="" description="" unit="" values="" default="Form"/>
+                            <Tag name="Widget_Profile::CW_Step(UML::Class)" type="" description="" unit="" values="" default="Step"/>
+                            <Tag name="Widget_Profile::CW_Field(UML::Class)" type="" description="" unit="" values="" default="Field"/>
+                            <Tag name="Widget_Profile::CW_Section(UML::Class)" type="" description="" unit="" values="" default="Section"/>
+                        </TaggedValues>
+                    </Stereotype>
+
+                    <Stereotype name="WidgetConnectors" alias="Widget Connectors" notes="Connectors from widget">
+                        <AppliesTo>
+                            <Apply type="ToolboxPage"/>
+                        </AppliesTo>
+                        <TaggedValues>
+                            <Tag name="Widget_Profile::CW_WidgetRelatedMenu(UML::Aggregation)" type="" description="" unit="" values="" default="Widget Related Menu"/>
+                            <Tag name="Widget_Profile::CW_MenuRelatedMenuItem(UML::Aggregation)" type="" description="" unit="" values="" default="Menu Related Menu Item"/>
+                            <Tag name="Widget_Profile::CW_UIAssetRelatedSetting(UML::Aggregation)" type="" description="" unit="" values="" default="UI Asset Related Setting"/>
+                            <Tag name="Widget_Profile::CW_CommandRelatedParameter(UML::Aggregation)" type="" description="" unit="" values="" default="Command Related Parameter"/>
+                            <Tag name="Widget_Profile::CW_DefaultCommand(UML::Aggregation)" type="" description="" unit="" values="" default="Default Command"/>
+                            <Tag name="Widget_Profile::CW_DataItemRelatedInput(UML::Aggregation)" type="" description="" unit="" values="" default="Data Item Related Input"/>
+                            <Tag name="Widget_Profile::CW_RelatedColumns(UML::Aggregation)" type="" description="" unit="" values="" default="Related Columns"/>
+                            <Tag name="Widget_Profile::CW_PortalRelatedCommands(UML::Aggregation)" type="" description="" unit="" values="" default="Portal Related Commands"/>
+                            <Tag name="Widget_Profile::CW_RelatedSteps(UML::Aggregation)" type="" description="" unit="" values="" default="Related Steps"/>
+                            <Tag name="Widget_Profile::CW_RelatedSections(UML::Aggregation)" type="" description="" unit="" values="" default="Related Sections"/>
+                            <Tag name="Widget_Profile::CW_RelatedFields(UML::Aggregation)" type="" description="" unit="" values="" default="Related Fields"/>
+                        </TaggedValues>
+                    </Stereotype>
+                </Stereotypes>
+                <TaggedValueTypes/>
+                <ViewDefinitions/>
+                <Metamodel/>
+            </Content>
+        </UMLProfile>
+    </UIToolboxes>
+
+</MDG.Technology>
